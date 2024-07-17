@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "visual-interpolation"
+version = "0.1.0"
+description = ""
+authors = ["Sean Gallagher <stgallag@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+opencv-python = "^4.10.0.82"
+scikit-learn = "^1.5.0"
+torch = {version = "^2.3.0+cpu", source = "pytorch-cpu-src"}
+polars = "^0.20.31"
+
+
+[[tool.poetry.source]]
+name = "pytorch-cpu-src"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
